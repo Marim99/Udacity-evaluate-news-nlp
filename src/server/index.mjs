@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("dist"));
 
-const PORT = 8081;
+const PORT = 8080;
 
 var textapi = new aylien({
   application_key: process.env.API_KEY,

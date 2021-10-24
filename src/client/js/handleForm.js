@@ -20,7 +20,7 @@ function handleSubmit(e) {
   let url = document.getElementById("article-url").value;
   if (Client.checkURL(url)) {
     console.log("form submitted");
-    postData("http://localhost:8081/add-url", { url }).then((data) => {
+    postData("http://localhost:8080/add-url", { url }).then((data) => {
       document.getElementById(
         "article-text",
       ).innerHTML = `text: ${data.sentence_list[0].text}`;
