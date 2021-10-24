@@ -31,11 +31,11 @@ app.get("/", function (req, res) {
 app.post("/add-url", async (req, res) => {
   try {
     const { url } = req.body.url;
-    //console.log("the url is", url);
+
     const apiURL = `${baseURL}?key=${myApiKey}&url=${req.body.url}&lang=en`;
     const response = await fetch(apiURL);
     const data = await response.json();
-    //console.log("the data is ", data);
+
     res.send(data);
   } catch (e) {
     console.log(e);
